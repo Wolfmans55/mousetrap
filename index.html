@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: url('http://media.istockphoto.com/vectors/cheese-vector-background-vector-id514774560?k=6&m=514774560&s=170667a&w=0&h=qiJaVu1AxL5tAo28JNH3ea_TIEClzlPyyVHRGG8diE4=');
+      }
+      img {
+        height: 100%;
+        width: auto;
+        max-height: 720px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      #refresh {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <script language="JavaScript" type="text/javascript">
+
+  function reload()
+  {
+     setTimeout('reloadImg("refresh")',33.33)
+  };
+
+  function reloadImg(id)
+  {
+     var obj = document.getElementById(id);
+     var date = new Date();
+     obj.src = "http://mlgcats.com:8090/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=guest&pwd=guest&t=" + Math.floor(date.getTime()/1000);
+  }
+
+  </script>
+
+  <img src="http://mlgcats.com:8090/cgi-bin/CGIProxy.fcgi?cmd=snapPicture2&usr=guest&pwd=guest&t=" name="refresh" id="refresh" onload='reload(this)' onerror='reload(this)'>
+
+  <div id="rt-16fc47b6c0e9bbda7739c526ced16197"></div><script src="https://www.rumbletalk.com/client/?PM4iA5r3&1"></script>
+  </body>
+</html>
